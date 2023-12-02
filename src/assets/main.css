@@ -4,12 +4,13 @@
 :root {
   --background-color: #23272e;
   --text-color: #FFF;
-  --navbar-color: #15181c;
-  --accent-color:#41b883;
+  --navbar-color: #658D11;
+  --accent-color:#215150;
   --danger-color: #E06c75;
   --warning-color: #e5c07b;
   --info-color:#61afef;
   --secondary-color:grey;
+  
 }
 html{
   background-color: var(--background-color);
@@ -17,7 +18,7 @@ html{
   font-family: 'Fira Sans',sans-serif;
 }
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
   
 }

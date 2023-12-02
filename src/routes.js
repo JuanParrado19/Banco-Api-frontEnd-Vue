@@ -3,10 +3,11 @@ import Home from "./views/Home.vue"
 import Deposit from "./views/Deposit.vue"
 import TrasferAccount from "./views/TransferAccount.vue"
 import Login from "./views/Login.vue"
+import TechHome from "./views/TechHome.vue"
 const routes = [
     {
         path: "/",
-        component: Login
+        component: TechHome
     },
     {
         path: "/home/:loginId",
