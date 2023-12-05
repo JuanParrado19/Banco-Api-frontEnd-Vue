@@ -1,8 +1,10 @@
 <template>
     <Banner/>
+    <TechContent/>
 </template>
 <script setup>
 import Banner from "../components/Banner.vue"
+import TechContent from "../components/TechContent.vue";
 </script>
 <style>
 .Banner-Container{
