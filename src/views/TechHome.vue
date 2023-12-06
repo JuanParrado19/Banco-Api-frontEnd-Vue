@@ -21,4 +21,6 @@ import TechContent from "../components/TechContent.vue";
     object-fit:contain;
     height: 200%;
 }
+
+
 </style>

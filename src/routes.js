@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "./views/Home.vue"
-import Deposit from "./views/Deposit.vue"
-import TrasferAccount from "./views/TransferAccount.vue"
+import TechAccount from "./views/TechAccount.vue"
 import Login from "./views/Login.vue"
 import TechHome from "./views/TechHome.vue"
 const routes = [
@@ -10,19 +8,14 @@ const routes = [
         component: TechHome
     },
     {
-        path: "/home/:loginId",
-        component: Home,
+        path: "/login",
+        component: Login,
         props:true
     },
     {
-        path: "/about/:id/deposit",
-        component: Deposit,
+        path: "/account",
+        component: TechAccount,
         props:true
-    },
-    {
-        path: "/accounts/:id/transfer",
-        component: TrasferAccount,
-        props: true
     }
 ]
 const router = createRouter({

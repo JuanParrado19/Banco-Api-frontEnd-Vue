@@ -5,7 +5,7 @@
 </template>
 <style>
 #Banner-Container{
- display: flex;
+    display: flex;
 
 
 }
@@ -14,4 +14,5 @@
     object-fit: cover;
     min-width: 100%;  
 }
+
 </style>

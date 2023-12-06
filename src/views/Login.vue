@@ -1,11 +1,10 @@
 <template>
     <Alert :show="alert.show" :message="alert.message" @close="alert.show = false" :variant="alert.variant" />
     <UserLogin :isLoading="isLogin" @submit="login" v-if="loginAccepted" />
-    <UserRegister :isLoading="isLogin" @submit="register" v-if="loginAccepted" />
+   
 </template>
 
 <script setup>
-import UserRegister from "../components/UserRegister.vue"
 import { ref, reactive } from 'vue';
 import UserLogin from '../components/UserLogin.vue';
 import axios from 'axios';
@@ -27,18 +26,13 @@ function showAlert(message, variant = "danger") {
     alert.variant = variant;
 }
 
-function register(loginId){
-    router.push(`home/${loginId}`);
-}
 
-
-function login(UserName, LastName,loginId) {
+function login(UserName, LastName) {
     isLogin.value = true;
     
     const formdata = {
-        "document": loginId,
         "name": UserName,
-        "last_name": LastName
+        "password": LastName
     }
     axios.post('/api/usuario/creacion', formdata)
     isLogin.value = true;
@@ -46,7 +40,7 @@ function login(UserName, LastName,loginId) {
     showAlert("Login Complete","info");
 
     loginAccepted.value=false;
-    router.push(`home/${loginId}`);
+    router.push(`account`);
     return {loginId};
 
 }

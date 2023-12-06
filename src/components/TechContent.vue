@@ -39,11 +39,38 @@
 
 .Main-Container img{
     margin-top: 5rem;
-    width: 30vw;
-    height: 30vh;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
     border-radius: 25px;
+    margin-right: 1em;
 
 
+}
+
+@media (max-width: 600px) {
+
+    .Main-Container img{
+        margin-top: 2rem;
+        max-width: 160px;
+
+    }
+}
+@media(max-width: 350px) {
+    .Info-Container{
+        margin-right: 15vw;
+    }
+    .Info-Container h2 {
+        font-size: 0.7em;
+    }
+    .Info-Container p{
+        font-size: 0.3em;
+    }
+    .Main-Container{
+        width: 100%;
+        max-width: 140px;
+        height: 140px;
+    }
 }
 
 </style>

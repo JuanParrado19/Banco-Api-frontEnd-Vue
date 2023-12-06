@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="logo">
       <img src="@/assets/logo.png" width="190" />
-      <div class="brand"></div>
+    
     </div>
 
     <div class="links">
@@ -11,7 +11,7 @@
         <li><RouterLink to="/home" >Soluciones</RouterLink></li>
         <li><RouterLink to="/home" >Colegios</RouterLink></li>
         <li><RouterLink to="/" >Compañia</RouterLink></li>
-        <li><RouterLink to="/home" >Mi Cuenta</RouterLink></li>      
+        <li><RouterLink to="/login" >cuenta</RouterLink></li>      
       </ul>
       <div class="Div-Colors">
           <li class="btn-Home"><RouterLink to="/home" ><span>Comunicarse con ventas</span></RouterLink></li>
@@ -68,7 +68,7 @@ const props = defineProps(['loginId']);
   content: "";
   background: #3B6967;
   height: 9.8%;
-  max-height: 105px;
+  max-height: 90px;
   width: 6.9vw;
   position: fixed;
   border-right: 10.2vw solid #225352;
@@ -105,10 +105,17 @@ a.router-link-active{
 }
 @media(max-width: 680px){
   .navbar{
-    display: block;
+    display: flex;
+
+    
   }
   .logo img{
-    width: 80px;
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+  }
+  .Div-Colors{
+    margin-left: 0.2em;
   }
   .links{
     margin-top: 10px;
@@ -126,6 +133,7 @@ a.router-link-active{
   .btn-Home{
     font-size: 1vw;
     margin-right: 3vw;
+    margin-left: 0.5em;
   }
   .btn-Home::after{
   margin-right: 50vw;
@@ -133,7 +141,7 @@ a.router-link-active{
   background: #3B6967;
   /* height: 9.8vh; */
   height: 8.5%;
-
+  max-height: 50px;
   width: 6.9vw;
   position: fixed;
   border-right: 10.2vw solid #225352;
@@ -142,5 +150,15 @@ a.router-link-active{
   top: 0.01%;
 }
 
+}
+
+@media(max-width: 350px){
+  .links a{
+    margin-left: 10px;
+  }
+
+  .Div-Colors{
+    
+  }
 }
 </style>
